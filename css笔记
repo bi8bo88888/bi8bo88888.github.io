@@ -73,15 +73,21 @@
     色相（0--360）饱和度（0-100%） 亮度（0-100%） 
 
 17.盒子模型主要构成：
-    内容区（content）， 内边距（padding）， 边框（border），外边距(margin)
-    设置内容区（content）1.内容区宽度（width）2.内容区颜色(background-color) 3.内容区高度（height）
-    设置边框(border): 1.边框宽度（border-width，默认为3px，可写四个值，分别是上右下左 四类边框的高度
+    内容区（content）， 边框（border）， 内边距（padding），外边距(margin)
+    17.1设置内容区（content）1.内容区宽度（width）2.内容区颜色(background-color) 3.内容区高度（height）
+    17.2设置边框(border): 1.边框宽度（border-width，默认为3px，可写四个值，分别是上右下左 四类边框的高度
                                                         可写三个值，分别是上 左右 下 三类边框的高度
-                                                        可写两个值，分别是上下 左右  两类边框的高度）
-                       或者用border-xxx-width，xxx分别是top bottom left right 上下左右
-                      2.边框颜色(border-color) 和上述的用法一样
-                      3.边框样式(border-style) 和上述的用法一样                                 
-
+                                                         可写两个值，分别是上下 左右  两类边框的高度）
+                           或者用border-xxx-width，xxx分别是top bottom left right 上下左右
+                         2.边框颜色(border-color) 和上述的用法一样
+                         3.边框样式(border-style) 和上述的用法一样  
+                         4.还可以简写 如 border:solid orange 10px，即可一次性设置四个边框
+                                        border-top:solid orange 10px，一次性设置上边框
+                         5.设置为none，则什么都不设置        
+    17.3设置内边距（padding）:1.颜色会继承内容区
+                             2.会占用盒子模型的大小 
+                             3.只能指定内边距的宽度 padding:10px                                                       
+    17.4设置外边距（padding）:1.只能指定外边距的宽度 padding:10px   
 
 
 
