@@ -1,0 +1,101 @@
+1.id选择器 ：
+    #yellow{}
+
+2.类选择器 ：
+    .blue{}
+
+3.通配选择器 ： 
+    *{}  
+
+4.交集选择器 ：  
+    同时满足h1 .blue 才会被选中  
+    h1.blue{}
+
+5. 并集选择器 ：  
+    只要含有h1，p，都会被选中
+    h1,p{}
+
+6.子元素选择器 ： 
+    父元素 > 子元素{}  ，（父元素屁股后面可以加#id或者.class，用来指定父元素）
+
+7.后代元素选择器 ： 
+    祖先 后代{} ； 
+    祖先 > 父元素 > 子元素{} ， 这样子更精确 
+
+8.选择下一个兄弟 ： 
+    前一个兄弟 + 下一个兄弟 {}   
+
+9.选择下边所有的兄弟 ：
+    兄 ~ 弟{} ， 兄之后的弟都会被选中 
+
+10.属性选择器 ： 
+    p[title]{} : 是p元素，且含有title元素，才会被选中 ； 
+    p[title=abc]{} : 是p元素，且title元素等于abc，才会被选中 
+    p[title^=abc]{} : 是p元素，且title元素以abc开头，才会被选中 
+    p[title$=abc]{} : 是p元素，且title元素以abc结尾，才会被选中 
+    p[title*=abc]{} : 是p元素，且title元素含有abc，才会被选中 
+
+11.伪类选择器 ： 
+    div > p:first-child ，选择div中的第一个元素（不一定是p哦，只是选择第一个） 
+    div > p:last-child ，选择div中的最后一个元素 
+    div > p:nth-child(在这里写第几个：第四个就写4) ，选择div中的第n个元素 
+                                                                              
+    div > p:first-of-type ，选择div中的第一个p） 
+    div > p:last-of-type，选择div中的最后一个p 
+    div > p:nth-of-type(在这里写第几个：第四个就写4) ，选择div中的第n个p 
+                                                                                
+    div > p:not(:nth-of-type(4)) ， 除了div中的第4个p，div其余的p都被选择 
+
+12.超链接伪类选择器 ：
+    a:link{} 选中没访问的链接 ； 
+    a:visited{} 选中访问过的链接 ； 
+    a:hover{} 鼠标移过去 ； 
+    a:active{} 鼠标点击*/
+
+13.伪元素选择器 ：  
+    p：：first-letter{} p中的第一个字母； 
+    p：：first-line{} p中的第一行  
+    p：：selection{} p中鼠标选中的内容  
+    div::before{content:abc} 在div开头插入abc 
+    div::after{content:abc} 在div结尾插入abc 
+
+14.优先级： 
+    内联样式（1000） > id选择器（100） > 类和伪类选择器（10） > 元素选择器（1） > 通配（0） > 继承*/
+    相加计算出优先级 ；不能跨越数量级（多个id选择器加起来都不会超过内联）；同优先级，从上到下运行*/
+    自定义最高级： !important    
+
+15.单位：
+    em的大小 = font-size(字体大小)    
+    若font-size=16px，则1em = 16px
+    rem的大小 = html中font-size的大小   
+
+16.HSL值 ： 
+    色相（0--360）饱和度（0-100%） 亮度（0-100%） 
+
+17.盒子模型主要构成：
+    内容区（content）， 内边距（padding）， 边框（border），外边距(margin)
+    设置内容区（content）1.内容区宽度（width）2.内容区颜色(background-color) 3.内容区高度（height）
+    设置边框(border): 1.边框宽度（border-width，默认为3px，可写四个值，分别是上右下左 四类边框的高度
+                                                        可写三个值，分别是上 左右 下 三类边框的高度
+                                                        可写两个值，分别是上下 左右  两类边框的高度）
+                       或者用border-xxx-width，xxx分别是top bottom left right 上下左右
+                      2.边框颜色(border-color) 和上述的用法一样
+                      3.边框样式(border-style) 和上述的用法一样                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
