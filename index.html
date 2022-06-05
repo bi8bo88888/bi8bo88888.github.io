@@ -61,9 +61,142 @@
      <iframe src="https://www.bilibili.com" width="800"  height="600" frameborder="0"></iframe>
      <br>
 
-     <p class="test">测试文本（占位用,无意义）</p>    
-     <p class="test"><font size="6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero obcaecati sed eum dignissimos reiciendis, officiis quidem fugiat autem reprehenderit minus nobis? Distinctio delectus molestiae fugit in illum! Libero, officia ad.</font></p>
-   
+     <p class="test">css笔记</p>    
+     <p class="test">
+      1.id选择器 ：
+         <br>
+          #yellow{}
+          <br><br>
+      2.类选择器 ：
+        <br>
+        .blue{}
+        <br><br>
+      3.通配选择器 ：
+       <br> 
+        *{}  
+        <br><br>
+      4.交集选择器 ：  
+       <br>
+        同时满足h1 .blue 才会被选中  
+        <br>
+        h1.blue{}
+        <br><br>
+    5. 并集选择器 ：  
+    <br>
+        只要含有h1，p，都会被选中
+        <br>
+        h1,p{}
+        <br><br>
+    6.子元素选择器 ：
+    <br> 
+        父元素 > 子元素{}  ，（父元素屁股后面可以加#id或者.class，用来指定父元素）
+        <br><br>
+    7.后代元素选择器 ：
+    <br> 
+        祖先 后代{} ； 
+        <br>
+        祖先 > 父元素 > 子元素{} ， 这样子更精确 
+        <br><br>
+    8.选择下一个兄弟 ：
+    <br> 
+        前一个兄弟 + 下一个兄弟 {}   
+        <br><br>
+    9.选择下边所有的兄弟 ：
+    <br>
+        兄 ~ 弟{} ， 兄之后的弟都会被选中 
+        <br><br>
+    10.属性选择器 ：
+    <br> 
+        p[title]{} : 是p元素，且含有title元素，才会被选中 ； <br>
+        p[title=abc]{} : 是p元素，且title元素等于abc，才会被选中 <br>
+        p[title^=abc]{} : 是p元素，且title元素以abc开头，才会被选中 <br>
+        p[title$=abc]{} : 是p元素，且title元素以abc结尾，才会被选中 <br>
+        p[title*=abc]{} : 是p元素，且title元素含有abc，才会被选中 <br><br>
+    
+    11.伪类选择器 ： <br>
+        div > p:first-child ，选择div中的第一个元素（不一定是p哦，只是选择第一个） <br>
+        div > p:last-child ，选择div中的最后一个元素 <br>
+        div > p:nth-child(在这里写第几个：第四个就写4) ，选择div中的第n个元素 <br><br>
+                                                                                  
+        div > p:first-of-type ，选择div中的第一个p） <br>
+        div > p:last-of-type，选择div中的最后一个p <br>
+        div > p:nth-of-type(在这里写第几个：第四个就写4) ，选择div中的第n个p <br><br>
+                                                                                    
+        div > p:not(:nth-of-type(4)) ， 除了div中的第4个p，div其余的p都被选择 <br><br>
+    
+    12.超链接伪类选择器 ：<br>
+        a:link{} 选中没访问的链接 ； <br>
+        a:visited{} 选中访问过的链接 ； <br>
+        a:hover{} 鼠标移过去 ； <br>
+        a:active{} 鼠标点击*/<br><br>
+    
+    13.伪元素选择器 ：  <br>
+        p：：first-letter{} p中的第一个字母； <br>
+        p：：first-line{} p中的第一行  <br>
+        p：：selection{} p中鼠标选中的内容  <br>
+        div::before{content:abc} 在div开头插入abc <br>
+        div::after{content:abc} 在div结尾插入abc <br><br>
+    
+    14.优先级： <br>
+        内联样式（1000） > id选择器（100） > 类和伪类选择器（10） > 元素选择器（1） > 通配（0） > 继承*/
+        <br>
+        相加计算出优先级 ；不能跨越数量级（多个id选择器加起来都不会超过内联）；同优先级，从上到下运行*/
+        <br>
+        自定义最高级： !important    
+        <br><br>
+    15.单位：<br>
+        em的大小 = font-size(字体大小) <br>   
+        若font-size=16px，则1em = 16px<br>
+        rem的大小 = html中font-size的大小   <br><br>
+    
+    16.HSL值 ： <br>
+        色相（0--360）饱和度（0-100%） 亮度（0-100%） <br><br>
+    
+    17.盒子模型主要构成：<br>
+        内容区（content）， 边框（border）， 内边距（padding），外边距(margin)<br><br>
+        17.1设置内容区（content）1.内容区宽度（width）2.内容区颜色(background-color) 3.内容区高度（height）
+        <br><br>
+        17.2设置边框(border): <br>1.边框宽度（border-width，默认为3px，可写四个值，分别是上右下左 四类边框的高度;<br>
+                                                            可写三个值，分别是上 左右 下 三类边框的高度;<br>
+                                                             可写两个值，分别是上下 左右  两类边框的高度）;<br>
+                               或者用border-xxx-width，xxx分别是top bottom left right 上下左右<br>
+                             2.边框颜色(border-color) 和上述的用法一样<br>
+                             3.边框样式(border-style) 和上述的用法一样  <br>
+                             4.还可以简写 如 border:solid orange 10px，即可一次性设置四个边框<br>
+                                            border-top:solid orange 10px，一次性设置上边框<br>
+                             5.设置为none，则什么都不设置        <br><br>
+        17.3设置内边距（padding）:<br>1.颜色会继承内容区<br>
+                                 2.会占用盒子模型的大小<br> 
+                                 3.只能指定内边距的宽度 padding:10px      <br> <br>                                               
+        17.4设置外边距（padding）:<br>1.只能指定外边距的宽度 padding:10px  <br><br>
+    
+    18.水平方向的布局<br>
+    需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width <br>
+    （即子元素盒子模型的宽度加起来）<br><br>
+
+
+    </p>
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     
      <a id="bottom" href="#">点我上天堂</a>
 
 

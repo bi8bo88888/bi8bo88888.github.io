@@ -5,7 +5,8 @@ p{
 }
 
 p.test{
-    color: pink;
+    font-size: 25px;
+    color: black;
     margin-left: 300px;
 }
 
