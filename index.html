@@ -29,7 +29,7 @@
     <!-- 盒子模型 -->
     <p>学习边框中</p>
     <div class="box1">
-        <div class="inner"> hello</div>
+        <div class="inner"></div>
     </div>
 
 
@@ -168,11 +168,14 @@
         17.3设置内边距（padding）:<br>1.颜色会继承内容区<br>
                                  2.会占用盒子模型的大小<br> 
                                  3.只能指定内边距的宽度 padding:10px      <br> <br>                                               
-        17.4设置外边距（padding）:<br>1.只能指定外边距的宽度 padding:10px  <br><br>
+        17.4设置外边距（padding）:<br>只能指定外边距的宽度 padding:10px  <br><br>
     
     18.水平方向的布局<br>
     需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width <br>
-    （即子元素盒子模型的宽度加起来）<br><br>
+    （即子元素盒子模型的宽度加起来）<br>
+    若什么都不设置，则会自动调整margin-right<br>
+    如果将宽度和外边距（或者两个外边距）都设置为auto，则宽度会被设置为最大<br>
+    将两个外边距都设置为auto，给内容区设置width，则可以居中<br><br>
 
 
     </p>

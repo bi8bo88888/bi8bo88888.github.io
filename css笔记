@@ -90,7 +90,10 @@
     17.4设置外边距（padding）:1.只能指定外边距的宽度 padding:10px  
 
 18.水平方向的布局:
-需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width
+    需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width
+    如果将宽度和外边距（或者两个外边距）都设置为auto，则宽度会被设置为最大
+    将两个外边距都设置为auto，给内容区设置width，则可以居中
+    若什么都不设置，则会自动调整margin-right
 
 
 
