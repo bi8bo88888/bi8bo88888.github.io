@@ -95,6 +95,10 @@
     将两个外边距都设置为auto，给内容区设置width，则可以居中
     若什么都不设置，则会自动调整margin-right
 
+19.垂直方向的布局：
+    使用overflow控制溢出部分: 可选值有 visible(显示)  hidden(隐藏)  scroll(生成滚动条) auto(自适应生成滚动条) 
+    overflow-x , overflow-y 分别控制横纵轴方向的溢出
+
 
 
 
