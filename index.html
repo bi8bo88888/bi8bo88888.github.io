@@ -171,24 +171,26 @@
         17.4设置外边距（padding）:<br>只能指定外边距的宽度 padding:10px  <br><br>
     
     18.水平方向的布局<br>
-    需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width <br>
-    （即子元素盒子模型的宽度加起来）<br>
-    若什么都不设置，则会自动调整margin-right<br>
-    如果将宽度和外边距（或者两个外边距）都设置为auto，则宽度会被设置为最大<br>
-    将两个外边距都设置为auto，给内容区设置width，则可以居中<br><br>
+        1.需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width <br>
+        （即子元素盒子模型的宽度加起来）<br>
+        2.若什么都不设置，则会自动调整margin-right<br>
+        3.如果将宽度和外边距（或者两个外边距）都设置为auto，则宽度会被设置为最大<br>
+        4.将两个外边距都设置为auto，给内容区设置width，就可以实现居中<br><br>
 
     19.垂直方向的布局：<br>
-    使用overflow控制溢出部分: 可选值有 visible(显示)  hidden(隐藏)  scroll(生成滚动条) auto(自适应生成滚动条) <br>
-    overflow-x , overflow-y 分别控制横纵轴方向的溢出<br><br>
+        1.使用overflow控制溢出部分: 可选值有 visible(显示)  hidden(隐藏)  scroll(生成滚动条) auto(自适应生成滚动条) <br>
+        2.overflow-x , overflow-y 分别控制横纵轴方向的溢出<br><br>
      
     20.垂直方向外边距的折叠：<br>
-    兄弟元素：取两者中较大的（若都为正值）；取两者的和（若一正一负）；取绝对值较大的（若都为负值）<br>
-    父子元素：子元素的上外边距会传递给父元素,可以给父元素添加border-top或者padding-top来解决，但不是完美方案<br><br>    
+        1.兄弟元素：取两者中较大的（若都为正值）；取两者的和（若一正一负）；取绝对值较大的（若都为负值）<br>
+        2.父子元素：子元素的上外边距会传递给父元素,可以给父元素添加border-top或者padding-top来解决，但不是完美方案<br><br>    
     
     21.行内元素的盒子模型：<br>
-    不能设置width,height<br>
-    可以设置padding，border，margin，但是垂直方向的这些不会影响页面布局（不会挤别人，但有可能覆盖） <br>      
-    display可选值：inline 将元素设置为行内元素；block 将元素设置为块元素<br><br>
+        1.不能设置width,height<br>
+        2.可以设置padding，border，margin，但是垂直方向的这些不会影响页面布局（不会挤别人，但有可能覆盖） <br>      
+        3.display可选值：inline 将元素设置为行内元素；block 将元素设置为块元素；
+          inline-block 设置为行内块元素（既不独占一行，又可设置宽高）；table 设置为表格；none 隐藏<br>
+        4.visibility 可选值：hidden 隐藏（会占位）   <br><br>
 
     </p>
 
