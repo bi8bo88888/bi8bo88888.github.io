@@ -34,9 +34,13 @@ h1.pink{
 }
 
 a{
+    display: block;
+    width: 500px;
+    height: 50px;
     color: greenyellow;
     font-size: 25px;
     margin-left: 550px;
+    background-color:rgb(82, 40, 64) ;
 }
 
 a#top{
