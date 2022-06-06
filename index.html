@@ -180,10 +180,14 @@
     19.垂直方向的布局：<br>
     使用overflow控制溢出部分: 可选值有 visible(显示)  hidden(隐藏)  scroll(生成滚动条) auto(自适应生成滚动条) <br>
     overflow-x , overflow-y 分别控制横纵轴方向的溢出<br><br>
-    </p>
      
+    20.垂直方向外边距的折叠：<br>
+    兄弟元素：取两者中较大的（若都为正值）；取两者的和（若一正一负）；取绝对值较大的（若都为负值）<br>
+    父子元素：子元素的上外边距会传递给父元素,可以给父元素添加border-top或者padding-top来解决，但不是完美方案<br><br>    
     
-    
+
+    </p>
+
      <a id="bottom" href="#">*点我上天堂*</a>
 
 </body>
