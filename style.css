@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html{
     background-color: rgb(173, 159, 171);
 }
@@ -8,6 +13,11 @@ p{
     width: 250px;
     margin-left: 500px;
 
+}
+
+p.yellow{
+    font-size: 300px;
+    color: yellow;
 }
 
 p.test{
