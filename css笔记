@@ -108,7 +108,9 @@
     2.可以设置padding，border，margin，但是垂直方向的这些不会影响页面布局（不会挤别人，但有可能覆盖）       
     3.display 可选值：inline 将元素设置为行内元素；block 设置为块元素；inline-block 设置为行内块元素（既不独占一行，又可设置宽高）；
                   table 设置为表格；none 隐藏（不占位）
-    4.visibility 可选值：hidden 隐藏（会占位）             
+    4.visibility 可选值：hidden 隐藏（会占位）
+
+22.隐藏ul排序的小点点：list-style-type: none                
 
 
 
