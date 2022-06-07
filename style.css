@@ -15,6 +15,10 @@ p{
 
 }
 
+p:hover{
+    color: burlywood;
+}
+
 p.yellow{
     font-size: 300px;
     color: yellow;
@@ -41,6 +45,10 @@ h1.pink{
     width: 900px;
     margin-left: auto;
     margin-right: auto;
+}
+
+h1.pink:hover{
+    color: palevioletred;
 }
 
 a{
