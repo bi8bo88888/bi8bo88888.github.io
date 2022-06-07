@@ -6,27 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网易</title>
     <style>
-        .new-img > h2{
-          margin-bottom: -20px;
+        a{
+            color: black;
+            text-decoration:none;
+            font-weight: bold;
+        }
+        a:hover{
+            color: palevioletred;
+        }
+        .news-wrapper{
+           width: 380px;
+           height: 455px;
+           background-color: bisque;
+           margin: 50px auto;
+           border-top: 3px solid #ddd; 
+        }
+        ul{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        h2{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .news-title{
+            display: inline-block;
+            height: 20px;
+            border-top:3px solid red;
+            margin-top: -3px;
+        }
+        .img-title{
+            margin-top: -45px;
+            margin-left: 40px;
+        }
+        .new-list{
+            height: 150px;
+            margin-top: 20px
         }
     </style>
+
 </head>
 <body>
-    <div>
-        <h2>
+    <div class="news-wrapper">
+        <h2 class="news-title">
             <a href="#">体育</a>
         </h2>
 
-        <div class="new-img">
+        <div class="news-img">
             <a href="#">
                 <img src="./img/1.jpg" alt="1">
-               <h2>
+               <h2 class="img-title">
                 费德勒！
                </h2>
             </a>
         </div>
     
-        <ul>
+        <ul class="new-list">
             <li>
                 <a href="#">乔丹：我爱LA</a>
             </li>
