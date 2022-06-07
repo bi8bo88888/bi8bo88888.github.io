@@ -69,19 +69,19 @@ a:active{
     color: rgb(102, 58, 66)
 }
 
-a#top{
+#top{
 color: aqua;
 }
 
-a#bottom{
+#bottom{
 color: aqua;
 }
 
-a#top:hover{
+#top:hover{
     color: palevioletred;
 }
     
-a#bottom{
+#bottom:hover{
     color: palevioletred;
 }
 
@@ -120,6 +120,9 @@ iframe{
     background-color: pink;
 }
 
+p:hover{
+    color: palegreen;
+}
 
 
 
