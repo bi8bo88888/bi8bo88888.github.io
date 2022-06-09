@@ -94,6 +94,7 @@
     17.7盒子的尺寸：1.若box-sizing是content-box: 默认值，width和height用来设置内容区的大小
                    2.若box-sizing是border-box:  width和height指的是 内容区+内边距+外边距 的大小
     17.8设置圆角(border-radius): 举例border-top-left-radius(左上角) border-bottom-right-radius(右下角)
+                                或者直接border-radius(分别是左上-右上-右下-左下)
 
 18.水平方向的布局:
     1.需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width
@@ -117,6 +118,9 @@
     4.visibility 可选值：hidden 隐藏（会占位）
 
 22.隐藏ul排序的小点点：list-style-type: none   
+
+23.浮动：使元素向父元素的左侧或右侧移动，设置浮动后，水平布局的等式就不用强制成立
+         float: none(不浮动) left(向左) right(向右)
 
 
 
