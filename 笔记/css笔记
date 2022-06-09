@@ -91,6 +91,9 @@
     17.4设置外边距（padding）:1.只能指定外边距的宽度 padding:10px  
     17.5轮廓线（outline）：在可见框的外面增加一圈轮廓，不会影响可见框的大小，可实现鼠标移动到一段话时，生成轮廓线的效果
     17.6阴影(box-shadow)：apx bpx cpx color , a：阴影的水平位置（正右负左） ，b:阴影的垂直位置（正下负上）, c:模糊半径
+    17.7盒子的尺寸：1.若box-sizing是content-box: 默认值，width和height用来设置内容区的大小
+                   2.若box-sizing是border-box:  width和height指的是 内容区+内边距+外边距 的大小
+    17.8设置圆角(border-radius): 举例border-top-left-radius(左上角) border-bottom-right-radius(右下角)
 
 18.水平方向的布局:
     1.需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width
@@ -115,9 +118,7 @@
 
 22.隐藏ul排序的小点点：list-style-type: none   
 
-23.盒子的尺寸：
-   若box-sizing是content-box: 默认值，width和height用来设置内容区的大小
-   若box-sizing是border-box:  width和height指的是 内容区+内边距+外边距 的大小
+
 
 
 
