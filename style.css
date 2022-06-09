@@ -58,15 +58,25 @@ div.tt{
     width: 538px;
 }
 
-a{
+div.t{
+    margin-left: auto;
+    margin-right:auto ;
+    width: 200px;
+}
+
+#bottom{
+    color: aqua;
+    float: none;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 500px;
+    }
+
+a{
     height: 50px;
     line-height: 50px;
     color: greenyellow;
     font-size: 25px;
-    margin-left: px;
     padding-left: 10px;
     padding-right: 10px;
     background-color:rgb(82, 40, 64) ;
@@ -86,9 +96,7 @@ a:active{
 color: aqua;
 }
 
-#bottom{
-color: aqua;
-}
+
 
 #top:hover{
     color: palevioletred;
