@@ -18,9 +18,9 @@ input{ outline: none;}
 
 
 
-下面是我在网上找的各大网站CSS初始化示例代码：
+/* 下面是我在网上找的各大网站CSS初始化示例代码：
 
-网易官网 样式初始化：
+网易官网 样式初始化： */
 html {overflow-y:scroll;}
 
 body {margin:0; padding:29px00; font:12px"\5B8B\4F53",sans-serif;background:#ffffff;}
