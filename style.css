@@ -53,16 +53,16 @@ h1.pink:hover{
 }
 
 a{
-    display: block;
     width: 230px;
     height: 50px;
     color: greenyellow;
     font-size: 25px;
-    margin-left: 550px;
+    margin-left: 300px;
     padding-left: 10px;
     padding-right: 10px;
     background-color:rgb(82, 40, 64) ;
     border-radius: 15px;
+    float: left;
 }
 
 a:hover{
