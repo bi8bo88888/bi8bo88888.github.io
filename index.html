@@ -147,8 +147,9 @@
         若font-size=16px，则1em = 16px<br>
         rem的大小 = html中font-size的大小   <br><br>
     
-    16.HSL值 ： <br>
-        色相（0--360）饱和度（0-100%） 亮度（0-100%） <br><br>
+    16.色彩 ： <br>
+        1.HSL值：色相（0--360）饱和度（0-100%） 亮度（0-100%） <br>
+        2.RGB值：红绿蓝，还可以额外添加透明度（取值为0~1，此时变成rgba值）<br><br>
     
     17.盒子模型主要构成：<br>
         内容区（content）， 边框（border）， 内边距（padding），外边距(margin)<br><br>
@@ -166,8 +167,11 @@
         17.3设置内边距（padding）:<br>1.颜色会继承内容区<br>
                                  2.会占用盒子模型的大小<br> 
                                  3.只能指定内边距的宽度 padding:10px      <br> <br>                                               
-        17.4设置外边距（padding）:<br>只能指定外边距的宽度 padding:10px  <br><br>
-    
+        17.4设置外边距（padding）:<br>只能指定外边距的宽度 padding:10px  <br>
+        17.5轮廓线（outline）：在可见框的外面增加一圈轮廓，不会影响可见框的大小，可实现鼠标移动到一段话时，生成轮廓线的效果<br><br>
+        17.6阴影(box-shadow)：apx bpx color , a：阴影的水平位置（正右负左） ，b:阴影的垂直位置（正下负上）
+
+
     18.水平方向的布局<br>
         1.需满足margin-left + border-left + padding-left + width + padding-right + border-right + margin-right = 父元素的width <br>
         （即子元素盒子模型的宽度加起来）<br>
@@ -191,6 +195,10 @@
         4.visibility 可选值：hidden 隐藏（会占位）   <br><br>
     
     22.隐藏ul排序的小点点：list-style-type: none <br><br>      
+
+    23.盒子的尺寸：<br>
+       若box-sizing是content-box: 默认值，width和height用来设置内容区的大小<br>
+       若box-sizing是border-box:  width和height指的是 内容区+内边距+外边距 的大小<br><br>
     </p>
 
      <a id="bottom" href="#">*点我上天堂*</a>
