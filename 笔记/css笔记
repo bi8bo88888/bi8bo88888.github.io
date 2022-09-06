@@ -124,8 +124,11 @@
 
 24.文字在块元素中居中：将line-height的高度 设置成 height的高度
 
+25.三层结构 header main footer
 
+26.设置bfc：将overflow设置为非visible，以使元素可以包含浮动元素，解决高度塌陷问题
 
+27.clear:left(清除左侧元素浮动造成的影响)   right(清除右侧元素浮动造成的影响) both（电脑自动决定）
 
 
 
