@@ -9,12 +9,55 @@
     <meta name="description" content="前端学习">
     <!-- 跳转页面 -->
     <!-- <meta http-equiv="refresh" content="3;url=https://www.baidu.com"> -->
-    <title>百度</title>
+    <title>测试网页</title>
     
-    <script src="./js"></script>
+    <!-- <script src="./js"></script>            -->
     <!-- 引入js -->
-    <script>alert("内部js代码")</script>
+    <!--   <script>alert("内部js代码")</script>   -->
     <!-- 弹出窗口 -->
+
+    <script>
+    // 质数之和
+    
+        while(true){
+            var number = prompt("请输入一个数字(0-1000)")
+            if(number<0 || number>1000){
+            alert("请输入0到1000以内的数");
+            }
+            else{
+                break;
+            }
+        }
+       
+        var sum = 0;
+
+        for(var i=2;i<=number;i++)
+        {
+            var flag = true; 
+
+            for(var j=2;j<=Math.sqrt(i);j++)
+            {
+              if(i%j == 0){
+                 flag=false;
+                 break
+              }
+            }   
+
+            if(flag){
+                sum=sum+i;
+            }
+        }
+       
+        alert("1到"+number+"之间的质数之和为："+sum);
+
+        var obj = new Object();
+
+        obj.name = "孙悟空";
+        console.log(obj.name);
+
+        (function(a,b){console.log("我是立即执行函数")})();
+
+    </script>
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -32,8 +75,10 @@
     <button  onclick="alert('别点我!');">点我一下</button>
     <script>
         var str;
-        str="我说:“你好”"
-        document.write(str); 输出字
+        str="爱点不点"
+        document.write(str); 
+        // 输出str的内容 
+        
  
     </script>
     
