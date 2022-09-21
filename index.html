@@ -50,10 +50,28 @@
        
         alert("1到"+number+"之间的质数之和为："+sum);
 
-        var obj = new Object();
+       
+  
+        function Person(name,age){
+            var obj = new Object();
+            obj.name = name;
+            obj.age=age;
+            obj.say=function(){
+                alert(this.name);
+            };
 
-        obj.name = "孙悟空";
-        console.log(obj.name);
+            return obj;
+        };
+
+        var obj1 = new Person("孙悟空",19);
+
+      
+        for(var n in obj1){
+            console.log(n); //属性名
+            console.log(obj1[n]); //属性值
+        };
+
+        obj1.say();
 
         (function(a,b){console.log("我是立即执行函数")})();
 
