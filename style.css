@@ -7,12 +7,27 @@ html{
     background-color: rgb(173, 159, 171);
 }
 
+#img{
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: aqua;
+    text-align: center;
+}
+
 p{
     color: pink;
     font-size: 50px;  
     width: 250px;
     margin-left: 500px;
 
+}
+
+p#pimg{
+    margin: 10px auto;
+    width: 1000px;
+    font-size: 50px;
+    text-align: center;
 }
 
 p:hover{
@@ -114,9 +129,6 @@ audio{
     margin-left: 500px;;
 }
 
-img{
-    margin-left: 500px;
-}
 
 iframe{
     margin-left: 500px;

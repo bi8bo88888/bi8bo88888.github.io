@@ -21,36 +21,36 @@
     //正则表达式 只要找到//之间的东西即为true
     //或:a|b|c = [a-c]  ， 除了：[^] 仅在[]中才有除了的意思 , 量词：aaa=a{3} 、 a{1,6} = 出现1到6次a 、 a+  = a至少出现一次  , a* = a任意多少都行 , ? = 0或1次
     // ^开头 $结尾 \w 数字字母下划线 \W 除了w \d 数字 \D 除了数字 \s 空格 \S 除了空格 \b 单词边界 \B 除了单词边界
-    while(true){
-            var reg =   /^1[3-9][0-9]{9}$/ ;
+    // while(true){
+    //         var phoneReg =   /^1[3-9][0-9]{9}$/ ;
 
          
-            var phone = prompt("请输入手机号");
-            phone = phone.replace(/\s/g,"");
+    //         var phone = prompt("请输入手机号");
+    //         phone = phone.replace(/\s/g,"");
 
-            if(!reg.test(phone)){
-            alert("请输入正确的手机号");
-            }
-            else{
-                alert("手机号已记录！");
-                break;
-            }
-        }
+    //         if(!phoneReg.test(phone)){
+    //         alert("请输入正确的手机号");
+    //         }
+    //         else{
+    //             alert("手机号已记录！");
+    //             break;
+    //         }
+    //     }
     
-    while(true){
-            var reg =   /\w+@[A-z0-9]+\.com/ ;
+    // while(true){
+    //         var emailReg =   /\w+@[A-z0-9]+\.com/ ;
 
-            var email = prompt("请输入电子邮箱");
-            email = email.replace(/\s/g,"");
+    //         var email = prompt("请输入电子邮箱");
+    //         email = email.replace(/\s/g,"");
 
-            if(!reg.test(email)){
-            alert("请输入正确的电子邮箱");
-            }
-            else{
-                alert("电子邮箱已记录！");
-                break;
-            }
-        }
+    //         if(!emailReg.test(email)){
+    //         alert("请输入正确的电子邮箱");
+    //         }
+    //         else{
+    //             alert("电子邮箱已记录！");
+    //             break;
+    //         }
+    //     }
 
     // 质数之和
     
@@ -155,18 +155,6 @@
         <a href="./黄色.html" target="_blank">--> giegie点我 <---</a>
         <a id="top" href="#bottom">*点我下地狱*</a>
     </div>
-    
-      
-    <button  onclick="alert('别点我!');">点我一下</button>
-    <script>
-        var str;
-        str="爱点不点"
-        document.write(str); 
-        // 输出str的内容 
-        
- 
-    </script>
-    
 
     <!-- 盒子模型 -->
     <p>学习边框中</p>
@@ -191,16 +179,53 @@
      <br>
 
      <!-- 图片 -->
-     <p title="我是图片"> 看看图片</p>
-     <img width="300" src="./Picture/66.jpg" alt="66">
-     <br>
-     <img width="300" src="https://tse1-mm.cn.bing.net/th/id/R-C.901f8ebdab22d065baefeae6c2701cc0?rik=Z3Hew18zFaF%2bLQ&riu=http%3a%2f%2fwww.pp3.cn%2fuploads%2f20120418lw%2f13.jpg&ehk=Es5ZGH90h%2foCghvlIwdKfUiqpO05gLSgOEBU2i0Mwok%3d&risl=&pid=ImgRaw&r=0" alt="beauty">
-     <br>
+     <p id="pimg"> 看看图片,当前是第1张</p>
+
+    <div id="img">
+        <img width="300" src="./Picture/1.jpg" alt="66">
+        <button id="pre">上一张</button>
+        <button id="next">下一张</button>
+    </div>
+
+
+     <script>
+       var pimg = document.getElementById("pimg");//找到图片的文字显示
+
+       var img = document.getElementsByTagName("img")[0]; //找到初始图片
+
+       var imgArr = ["./Picture/1.jpg","./Picture/2.jpg"]; //将照片放数组中
+
+       var index = 0;
+
+       var pre = document.getElementById("pre"); //找到按钮“上一个”
+       pre.onclick = function(){
+          index--;
+          if(index < 0){
+            index = imgArr.length-1;//回到最后一个
+          };
+          img.src = imgArr[index];
+
+          pimg.innerHTML="一共" + imgArr.length + "张照片,目前是第"+ (index+1) +"张图片";
+       };
+
+       var next = document.getElementById("next"); //找到按钮“下一个”
+       next.onclick = function(){
+          index++;
+          if(index > imgArr.length-1){
+            index = 0;//回到最初
+          };
+          img.src = imgArr[index];
+
+          pimg.innerHTML="一共" + imgArr.length + "张照片,目前是第"+ (index+1) +"张图片";
+       };
+
+     </script>
+    
 
      <!-- 内联框架 -->
-     <p>看看B站</strong></p>
+     <!-- <p>看看B站</strong></p>
 
-     <iframe src="https://www.bilibili.com" width="800"  height="600" frameborder="0"></iframe>
+     <iframe src="https://www.bilibili.com" width="800"  height="600" frameborder="0"></iframe> -->
      <br>
 
      <p class="test">css笔记</p>    
