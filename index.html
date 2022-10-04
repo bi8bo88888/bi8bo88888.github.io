@@ -150,33 +150,262 @@
 <body>
     <h1 class="pink">欢迎来到我的学习屋</h1>
     <!-- 超链接 target默认是_self ：不跳转 ， _blank ： 跳转-->
-    <div class="tt">
+    
+    <!-- <div class="tt">
         <a href="http://tools.liumingye.cn/music/?page=searchPage" target="_blank">听免费歌</a>
-        <a href="./黄色.html" target="_blank">--> giegie点我 <---</a>
+        <a href="./黄色.html" target="_blank">giegie点我</a>
         <a id="top" href="#bottom">*点我下地狱*</a>
+    </div> -->
+
+
+    <!--table表格 tr行 th表头 td值  -->
+    <table id="employeeTable">
+        <tr> 
+          <th>Name</th>
+          <th>Email</th>
+          <th>&nbsp;</th>
+        </tr>
+        <tr>
+          <td>一号</td>
+          <td>haha@qq.com</td>
+          <td><a href="deleteEmp?id=001">Delete</a></td>
+        </tr>
+        <tr>
+          <td>二号哈</td>
+          <td>22haha@qq.com</td>
+          <td><a href="deleteEmp?id=001">Delete</a></td>
+        </tr>
+    </table>
+
+    <div id="formDiv">
+        <h2>添加新员工</h2>
+        <table>
+            <tr>
+                <td class="word">Name:</td>
+                <td class="inp"><input type="text" name="empName" id="empName"></td>
+            </tr>
+            <tr>
+                <td class="word">Email:</td>
+                <td class="inp"><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button id="addEmpButton">submit</button></td>
+            </tr>
+        </table>   
+    </div>
+    <!-- <div id="form">
+        <form action="" method="post">
+            你最喜欢的运动是? <input type="checkbox" id="checkALLbox">全选/全不选
+            <br>
+            <input type="checkbox" name="items" value="篮球">篮球
+            <input type="checkbox" name="items" value="足球">足球
+            <input type="checkbox" name="items" value="乒乓球">乒乓球
+            <input type="checkbox" name="items" value="羽毛球">羽毛球
+            <br>
+            <input type="button" id="all" value="全选">
+            <input type="button" id="no" value="全不选">
+            <input type="button" id="rev" value="反选">
+            <input type="button" id="send" value="提交">
+        </form>
+            
+    </div>
+   
+    <div id="test1">
+        <input type="button" id="before" value="广州前面生成北京">
+        <input type="button" id="cre" value="生成北京">
+        <input type="button" id="rep" value="北京替换广州">
+        <input type="button" id="del" value="删除广州">
     </div>
 
-    <!-- 盒子模型 -->
+    <div id="test2">
+           <li id="gz">广州</li>
+           <li>成都</li>
+    </div> -->
+
+    <script>
+        //点击删除，删掉当前行
+        var allA = document.getElementsByTagName("a"); //获取删除按钮
+        for(var i=0;i<allA.length;i++){
+            allA[i].onclick = function(){
+                var tr = this.parentNode.parentNode; //a的父亲就是td，td的父亲就是tr
+                var name = tr.getElementsByTagName("td")[0].innerHTML;
+                var flag = confirm("是否确认删除"+name);
+                if(flag){
+                    tr.parentNode.removeChild(tr);//tr的父亲是table，让table删掉tr
+                };
+                return false;//这样就不用弹出超链接对应的新网页
+            };
+        };
+
+        //添加新信息
+        var addEmpButton = document.getElementById("addEmpButton");
+        addEmpButton.onclick = function(){
+            //获取文本框里的内容，文本框里的值是value
+            var name = document.getElementById("empName").value;
+            var email = document.getElementById("email").value;
+            //生成tr
+            var tr = document.createElement("tr"); 
+            //生成3个td，分别为name，email，delete的单元行
+            var nametd = document.createElement("td"); 
+            var emailtd = document.createElement("td"); 
+            var atd = document.createElement("td"); 
+            //生成超链接，为其添加链接、删除函数（因为上面的删除函数，只包含初始的那几个链接）
+            var a = document.createElement("a"); 
+            a.href="javascript:;";
+            a.onclick = function(){
+                var tr = this.parentNode.parentNode; //a的父亲就是td，td的父亲就是tr
+                var name = tr.getElementsByTagName("td")[0].innerHTML;
+                var flag = confirm("是否确认删除"+name);
+                if(flag){
+                    tr.parentNode.removeChild(tr);//tr的父亲是table，让table删掉tr
+                };
+                return false;//这样就不用弹出超链接对应的新网页
+            };
+            //生成文本，文本内容为刚才获取的文本框内容
+            var nameText = document.createTextNode(name);
+            var emailText = document.createTextNode(email);
+            var delText = document.createTextNode("Delete");
+            //将文本内容赋值给刚才生成的3个td，其中a的赋值比较特殊，因为刚才没有给它赋值Delete这个文字
+            nametd.appendChild(nameText);
+            emailtd.appendChild(emailText);
+            a.appendChild(delText);
+            atd.appendChild(a);
+            //将3个td赋值给tr
+            tr.appendChild(nametd);
+            tr.appendChild(emailtd);
+            tr.appendChild(atd);
+            //将tr赋值给table，注意：table隐藏了他的下一级“tbody”，虽然无伤大雅，但是影响css设置
+            var employeeTable = document.getElementById("employeeTable");
+            var tbody = employeeTable.getElementsByTagName("tbody")[0];
+            tbody.appendChild(tr);
+        };
+
+        //广州前面生成北京
+        var before = document.getElementById("before"); //获取id为before的按钮
+        before.onclick = function(){ //将按钮赋予函数
+            var li = document.createElement("li"); //生成li标签
+            var bjText = document.createTextNode("北京"); //生成文字“北京”
+            li.appendChild(bjText); //将文字“北京”赋予li标签 （即生成<li>北京</li>）
+
+            var gz = document.getElementById("gz"); //获取id为gz的标签（定位用）
+            var test2 = document.getElementById("test2"); //同上
+            test2.insertBefore(li,gz);//将li插入到gz标签之前，父节点为test2
+        };
+        //生成北京
+        var cre = document.getElementById("cre");
+        cre.onclick = function(){
+            var li = document.createElement("li");
+            var bjText = document.createTextNode("北京");
+            li.appendChild(bjText);
+
+            var tes2 = document.getElementById("test2");
+            test2.appendChild(li);
+        };
+        //北京替换广州
+        var rep = document.getElementById("rep");
+        rep.onclick = function(){
+            var li = document.createElement("li");
+            var bjText = document.createTextNode("北京");
+            li.appendChild(bjText);
+
+            var gz = document.getElementById("gz"); //获取id为gz的标签（定位用）
+            var test2 = document.getElementById("test2"); //同上
+            test2.replaceChild(li,gz);
+        };
+        //删除广州
+        var del = document.getElementById("del");
+        del.onclick = function(){
+            var gz = document.getElementById("gz"); //获取id为gz的标签（定位用）
+            var test2 = document.getElementById("test2"); //同上
+            test2.removeChild(gz);
+        };
+
+        var items = document.getElementsByName("items");//获取选项标签
+
+        var all = document.querySelector("#all"); //使用querySelector可以使用css选择器的语法来获取html中的结构
+        //var all = document.getElementById("all");//获取全选按钮
+        all.onclick = function(){
+            for(var i = 0 ;i<items.length ;i++){
+                items[i].checked=true;
+            }
+            checkALLbox.checked=true;
+        };
+
+        var no = document.getElementById("no");//获取全不选按钮
+        no.onclick = function(){
+            for(var i = 0 ;i<items.length ;i++){
+                items[i].checked=false;
+            }
+            checkALLbox.checked=false;
+        };
+
+        var rev = document.getElementById("rev");//获取反选按钮
+        rev.onclick = function(){
+            for(var i = 0 ;i<items.length ;i++){
+                items[i].checked = !(items[i].checked);
+            }
+            
+            checkALLbox.checked=true;
+                   
+            for(var j = 0 ;j<items.length ;j++){
+                if(!items[j].checked){
+                   checkALLbox.checked=false;
+                   break;
+                }
+            };
+        };
+
+        var send = document.getElementById("send");//获取提交按钮
+        send.onclick = function(){
+            for(var i = 0 ;i<items.length ;i++){
+                if(items[i].checked){
+                   alert(items[i].value);
+                }
+            }
+
+        };
+
+        var checkALLbox = document.getElementById("checkALLbox");//获取全选 打勾
+        checkALLbox.onclick = function(){
+            for(var i = 0 ;i<items.length ;i++){
+                items[i].checked = checkALLbox.checked;
+            }
+        };
+
+        for(var i = 0 ;i<items.length ;i++){  //时刻判断四个选项和“全选/不全选”是否正确
+                items[i].onclick = function(){
+                   checkALLbox.checked=true;
+                   for(var j = 0 ;j<items.length ;j++){
+                      if(!items[j].checked){
+                        checkALLbox.checked=false;
+                        break;
+                      }
+                   };
+                };
+            }
+    </script>
+
+    <!-- 盒子模型
     <p>学习边框中</p>
     <div class="box1">
         <div class="inner">111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>111111111111111111111<br>我爱你</div>
-    </div>
+    </div> -->
 
 
-     <!-- 音乐 -->
-     <!-- <audio src="../Music/fssx.flac" controls></audio> -->
+     <!-- 音乐
+    <audio src="../Music/fssx.flac" controls></audio>
      <p>听听歌</p>
      <audio controls>
          <source src="./Music/fssx.flac"> 
      </audio>
-     <br>
+     <br> -->
 
      <!-- 视频 -->
-     <p> 看看视频</p>
+     <!-- <p> 看看视频</p>
      <video controls width="800"  height="600">
          <source src="./Video/fssx.mp4">
      </video>
-     <br>
+     <br> --> 
 
      <!-- 图片 -->
      <p id="pimg"> 看看图片,当前是第1张</p>
@@ -189,6 +418,7 @@
 
 
      <script>
+
        var pimg = document.getElementById("pimg");//找到图片的文字显示
 
        var img = document.getElementsByTagName("img")[0]; //找到初始图片
@@ -197,8 +427,15 @@
 
        var index = 0;
 
-       var pre = document.getElementById("pre"); //找到按钮“上一个”
-       pre.onclick = function(){
+
+       //方法一
+
+       function myClick(idStr , fun){
+           var btn =document.getElementById(idStr);  //idstr是id名,fun是回调函数
+           btn.onclick = fun;
+       }
+
+       myClick("pre",function(){
           index--;
           if(index < 0){
             index = imgArr.length-1;//回到最后一个
@@ -206,7 +443,19 @@
           img.src = imgArr[index];
 
           pimg.innerHTML="一共" + imgArr.length + "张照片,目前是第"+ (index+1) +"张图片";
-       };
+       });
+
+       //方法二
+       //    var pre = document.getElementById("pre"); //找到按钮“上一个”
+       //    pre.onclick = function(){  
+        //       index--;
+        //       if(index < 0){
+        //         index = imgArr.length-1;//回到最后一个
+        //       };
+        //       img.src = imgArr[index];
+
+        //       pimg.innerHTML="一共" + imgArr.length + "张照片,目前是第"+ (index+1) +"张图片";
+        //    };
 
        var next = document.getElementById("next"); //找到按钮“下一个”
        next.onclick = function(){
